@@ -17,10 +17,8 @@ document.getElementById('loginForm').addEventListener('submit', (e) => {
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Processing...';
     btn.disabled = true;
 
-    // Simulate login delay
+    // Simulate login delay, then go to the dashboard
     setTimeout(() => {
-        alert("Login Successful!");
-        btn.innerHTML = originalContent;
-        btn.disabled = false;
-    }, 2000);
+        window.location.href = 'dashboard.html';
+    }, 1500);
 });

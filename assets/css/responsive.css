@@ -25,3 +25,37 @@
     .float-icon { display: none; }
     .form-options { flex-direction: column; align-items: flex-start; gap: 12px; }
 }
+@media (max-width: 1200px) {
+    .grid-3 { grid-template-columns: 1fr 1fr; }
+    .calendar-panel { grid-column: span 2; }
+}
+
+@media (max-width: 992px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .grid-2, .grid-2b { grid-template-columns: 1fr; }
+    .quick-actions { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 860px) {
+    .sidebar {
+        position: fixed;
+        z-index: 50;
+        transform: translateX(-100%);
+    }
+    .sidebar.open { transform: translateX(0); }
+    .menu-toggle { display: flex; align-items: center; justify-content: center; }
+    .grid-3 { grid-template-columns: 1fr; }
+    .calendar-panel { grid-column: span 1; }
+    .topbar { padding: 16px 18px; }
+    .content-scroll { padding: 20px 18px 32px; }
+}
+
+@media (max-width: 600px) {
+    .stats-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+    .stat-card { padding: 16px; }
+    .stat-value { font-size: 19px; }
+    .quick-actions { grid-template-columns: repeat(2, 1fr); }
+    .profile-text { display: none; }
+    .topbar-left p { display: none; }
+    .fee-summary-body { flex-direction: column; }
+}
