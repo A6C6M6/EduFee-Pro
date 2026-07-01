@@ -1,0 +1,5 @@
+@media (max-width: 850px) {
+    .main-wrapper { width: 95%; height: auto; flex-direction: column; }
+    .left-section { width: 100%; padding: 30px; text-align: center; }
+    .right-section { width: 100%; padding: 30px; }
+}
