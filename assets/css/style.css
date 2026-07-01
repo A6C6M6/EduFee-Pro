@@ -1,23 +1,26 @@
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-body { background: #f0f4f8; display: flex; height: 100vh; justify-content: center; align-items: center; }
+body { background: #eef2f7; display: flex; height: 100vh; justify-content: center; align-items: center; }
 
-.main-wrapper { display: flex; width: 950px; height: 650px; background: white; border-radius: 30px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.main-wrapper { display: flex; width: 950px; height: 650px; background: white; border-radius: 30px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
 
-/* Left Blue Section */
-.left-section { width: 45%; background: #0056b3; color: white; padding: 50px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
-.left-section h1 { font-size: 32px; margin-bottom: 5px; }
+/* Left Section */
+.left-section { width: 45%; background: #0056b3; color: white; padding: 40px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; text-align: center; }
+.logo-img { width: 80px; margin-bottom: 10px; }
+.left-section h1 { font-size: 28px; }
 .left-section span { color: #ffcc00; }
-.hero-img { width: 100%; margin-top: 30px; border-radius: 20px; }
+.hero-img { width: 100%; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.2); margin: 20px 0; }
+.tagline { font-style: italic; opacity: 0.9; }
 
-/* Right Form Section */
+/* Right Section */
 .right-section { width: 55%; padding: 60px; display: flex; flex-direction: column; justify-content: center; }
-h2 { font-size: 28px; margin-bottom: 10px; color: #333; }
-.input-group { position: relative; margin: 15px 0; }
-input { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 12px; }
+h2 { font-size: 26px; color: #333; margin-bottom: 5px; }
+.sub-text { color: #666; margin-bottom: 25px; }
+.input-group { position: relative; margin-bottom: 20px; }
+input { width: 100%; padding: 15px; border: 1px solid #ddd; border-radius: 12px; font-size: 15px; }
 #togglePassword { position: absolute; right: 15px; top: 18px; cursor: pointer; color: #888; }
-
-button { width: 100%; padding: 15px; background: #0056b3; color: white; border: none; border-radius: 12px; cursor: pointer; font-size: 16px; margin-top: 10px; }
-.google-btn { background: white; border: 1px solid #ddd; color: #333; margin-top: 10px; }
-.form-options { display: flex; justify-content: space-between; font-size: 14px; margin-top: -5px; }
-.divider { text-align: center; margin: 20px 0; color: #888; }
+button { width: 100%; padding: 15px; background: #0056b3; color: white; border: none; border-radius: 12px; cursor: pointer; font-size: 16px; font-weight: bold; }
+button:hover { background: #004494; }
+.google-btn { background: #fff; border: 1px solid #ddd; color: #333; margin-top: 10px; }
+.form-options { display: flex; justify-content: space-between; margin-bottom: 20px; font-size: 14px; }
+.divider { text-align: center; margin: 15px 0; color: #888; }
 .signup-link { text-align: center; margin-top: 20px; font-size: 14px; }
