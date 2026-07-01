@@ -1,29 +1,20 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // 1. Password Toggle
-    const togglePassword = document.getElementById('togglePassword');
-    const passwordInput = document.getElementById('password');
+// Password Toggle
+const togglePassword = document.getElementById('togglePassword');
+const password = document.getElementById('password');
 
-    togglePassword.addEventListener('click', () => {
-        const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-        passwordInput.setAttribute('type', type);
-        togglePassword.classList.toggle('fa-eye-slash');
-    });
+togglePassword.addEventListener('click', () => {
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    togglePassword.classList.toggle('fa-eye-slash');
+});
 
-    // 2. Login Logic & Loading Animation
-    const loginForm = document.getElementById('loginForm');
-    const loginBtn = document.getElementById('loginBtn');
-
-    loginForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Loading State
-        loginBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Please wait...';
-        loginBtn.disabled = true;
-
-        setTimeout(() => {
-            loginBtn.innerHTML = 'Login';
-            loginBtn.disabled = false;
-            alert("Login Successful! Redirecting to Dashboard...");
-        }, 2000);
-    });
+// Login Form Handling
+document.getElementById('loginForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const btn = document.getElementById('loginBtn');
+    btn.innerText = "Loading...";
+    setTimeout(() => {
+        alert("Login Successful!");
+        btn.innerText = "Login";
+    }, 1500);
 });
